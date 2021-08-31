@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="output"></div>
+    <script>
+        const Output = document.querySelector('.output');
+
+        async function showerror(){
+         var url= await fetch('www.youtube.com')
+         if(url.status){
+             Output.innerHTML = url.status;
+         }else{
+             Output.innerHTML = 'Error not found'
+         }
+    
+        }
+        showerror();
+    </script>
+</body>
+</html>
