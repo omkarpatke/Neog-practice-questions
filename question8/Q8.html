@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="output"></div>
+    <script>
+       var Output = document.querySelector('.output');
+
+        async function jocks(){
+            var url = await fetch('www.youtube.com/')
+            if(url.status === 404){
+                console.log('page not found');
+                console.log(url.status)
+                Output.innerHTML = 'Page Not Found';
+
+            }
+            else if(url.status === 401){
+                consol.log('you are not logedd in')
+                console.log(url.status);
+                Output.innerHTML = 'You are not loged in';
+            }
+        }
+        jocks();
+    </script>
+</body>
+</html>
