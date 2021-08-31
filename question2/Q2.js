@@ -10,7 +10,7 @@ function addText(){
 }
 
 
- var fontsize = 17;
+ var fontsize = 18;
 IncreseBtn.addEventListener('click',() =>{
    
   fontsize = fontsize + 2;
