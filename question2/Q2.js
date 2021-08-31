@@ -4,10 +4,13 @@ const DecreseBtn = document.querySelector('.decresebtn');
 const Input = document.querySelector('.input');
 
 
+function addText(){
+  var InputValue= Input.value;
+  Text.innerText = InputValue;
+}
 
 
-
- var fontsize = 35;
+ var fontsize = 17;
 IncreseBtn.addEventListener('click',() =>{
    
   fontsize = fontsize + 2;
