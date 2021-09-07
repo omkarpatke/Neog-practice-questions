@@ -7,12 +7,38 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" class="input" oninput="addInput()">
+    <input type="text" class="input" oninput="addText()">
+    <button onclick="h1()">h1</button>
+    <button onclick="h2()">h2</button>
+    <button onclick="h3()">h3</button>
     <div class="output"></div>
+
+    <script>
+        var Input = document.querySelector('.input');
+        var OutputDiv = document.querySelector('.output');
+
+        function addText(){
+            var InputValue = Input.value ;
+            OutputDiv.innerHTML = InputValue;
+        }
+        
+        function h1(){
+            var InputValue = Input.value ;
+            OutputDiv.innerHTML = `<h1>${InputValue}</h1>`;
+        }
+
+        function h2(){
+            var InputValue = Input.value ;
+            OutputDiv.innerHTML = `<h2>${InputValue}</h2>`;
+        }
+
+        function h3(){
+            var InputValue = Input.value ;
+            OutputDiv.innerHTML = `<h3>${InputValue}</h3>`;
+        }
+
+
     
-    <button class="h1">H1</button>
-    <button class="h2">H2</button>
-    <button class="h3">H3</button>
-    <script src="Q3.js"></script>
+    </script>
 </body>
 </html>
